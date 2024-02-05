@@ -1,0 +1,32 @@
+:root {
+    --color-principal: rgb(167, 239, 208);
+    --color-secundario: rgb(122, 113, 29);
+    --fuente-principal: 'Kosugi Maru', sans-serif;
+}
+.item-logo {
+    align-self: center;
+}
+
+.item-logo i {
+    color: #045230;
+
+}
+
+.barra-top { 
+    background-color:var(--color-principal); text-align: center; width: 100%; height: auto; padding: 5px 10px;
+    p { color:var(--color-principal); font-size: 13px; margin: 0; padding: 0;}
+}
+
+header.section-header .barra-top {
+    background-color:var(--color-secundario);
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 5px 10px;
+  }
+  header.section-header .barra-top p {
+    color:#fff;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+  }

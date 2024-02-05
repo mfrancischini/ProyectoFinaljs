@@ -1,0 +1,48 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+$primary:#092635;
+$secondary:#1B4242;
+$danger: #5C8374;
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger
+);
+
+body, * {
+  font-family: 'Nunito', sans-serif;
+}
+.text-primary { color: $primary !important;}
+.bg-primary {  background-color: $primary !important;}
+.bg-secondary {  background-color: $secondary !important;}
+.btn-primary {  background-color: $primary !important; border-color: $primary !important;}
+
+.font-mont { font-family: 'Montserrat', sans-serif;}
+
+.bl-primary { border-left: 8px solid #008AAC;}
+
+.fw-300 { font-weight: 300;}
+.fw-400 { font-weight: 400;}
+.fw-500 { font-weight: 500;}
+.fw-600 { font-weight: 600;}
+.fw-700 { font-weight: 700;}
+.fw-800 { font-weight: 800;}
+.fw-900 { font-weight: 900;}
+
+.pad0 { padding: 0px 0px !important}
+.mar0 { margin: 0px 0px !important}
+.m10 { margin: 10px 0px}
+.m20 { margin: 20px 0px}
+.m30 { margin: 30px 0px}
+.m40 { margin: 40px 0px}
+
+.opacity-25 { opacity: 0.25;}
+.opacity-50 { opacity: 0.5;}
+.opacity-75 { opacity: 0.75;}
+
+// @import "../libs/bootstrap-5.0.2/scss/bootstrap";
+@import "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css";
+
+// Then add additional custom code here

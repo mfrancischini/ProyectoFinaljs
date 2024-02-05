@@ -1,0 +1,292 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>GALA</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- CSS -->
+  <link href="css/estilos-bootstrap.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+  <link href="css/estilo-personal.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script defer src="js/main.js"></script>
+  <script src="js/class.compra.js"></script>
+
+<body>
+
+  <a href="#" class="wp" target="_blank"><img src="img/wapp.png"></a>
+
+  <!-- HEADER -->
+  <header class="section-header">
+          
+    <section class="barraTop">
+      <p>WWW.GALA.COM</p>
+    </section>
+        
+    <section class="py-2">
+      <nav class="navbar navbar-main navbar-expand-xl navbar-light">
+        <div class="container-xl">
+
+          <a class="navbar-brand" href="#"><img src="img/logo2.png" class="logo"></a>
+
+          <!-- ICONOS MOBILE -->
+          <div class="contUserMob d-flex d-xl-none align-content-center barraIconosDesktop">
+
+            <div class="dropdown dropSearch d-none d-md-flex">
+              <search><input type='search' value="" class="campo"> </search>
+            </div>
+
+            <div class="dropdown dropCuenta">
+              <button
+                class="btn dropdown-toggle w-100 d-flex justify-content-between align-items-center text-primary pe-3"
+                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="img/ic-user.svg" class="icon me-1"><span class="d-none d-md-block">Usuario</span>
+              </button>
+              <ul class="dropdown-menu w-100 bg-primary">
+                <li><a class="dropdown-item text-white" href="#">Mi cuenta</a></li>
+                <li><a class="dropdown-item text-white" href="#">Cerrar sesión</a></li>
+              </ul>
+            </div>
+
+            <button class="btn p-0 d-flex align-items-center cart">
+              <div class="position-relative">
+                <img src="img/ic-cart.svg" class="me-3">
+                <div class="countItem">0</div>
+              </div>
+              
+       
+            </button>
+          
+            <button class="btn p-0 d-flex d-md-none align-items-center search pe-3 searchMob">
+              <img src="img/ic-search.svg" alt="">
+              <ul>
+                <li>
+                  <search><input type='search' value="" class="campo"> </search>
+                </li>
+              </ul>
+            </button>
+
+            <img src="img/ic-menu.svg" class="abreMenuMobile d-block d-xl-none" alt="">
+
+          </div>
+
+
+          <!-- MENU DESKTOP -->
+          <div class="collapse navbar-collapse" id="main_nav2">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-3 mt-lg-0">
+
+              <!-- CATEGORIA -->
+              <li class="nav-item dropdown menuItem me-2">
+                <a class="nav-link dropdown-toggle dropdown-toggle2 fw-500 text-primary" href="#" id="navbarDropdown"
+                  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  PRODUCTOS
+                </a>
+                <ul class="dropdown-menu dropMenu01 dropMenuNivel1 bg-secondary" aria-labelledby="navbarDropdown">
+
+                  <li class="nav-item dropdown drop-down02">
+                    <a class="nav-link linked fw-500 text-white" href="#"><small>Alimentos</small></a>
+
+                  </li>
+
+                  <li class="nav-item dropdown drop-down02">
+                    <a class="nav-link linked fw-500 text-white" href="#"><small>Accesorios</small></a>
+
+                  </li>
+
+
+                  <li class="nav-item dropdown drop-down02">
+                    <a class="nav-link linked fw-500 text-white" href="#"><small>Ver todo</small></a>
+                  </li>
+
+                </ul>
+              </li>
+
+              <!-- CATEGORIA -->
+              <li class="nav-item dropdown menuItem me-2">
+                <a class="nav-link fw-500 text-primary" href="#">CONTACTO</a>
+              </li>
+
+            </ul>
+
+
+            <!-- ICONOS DESKTOP -->
+            <div class="barraIconosDesktop d-none d-lg-flex align-content-center">
+
+
+
+              <search><input type='search' id='campoABuscar' value="" class="campo" placeholder="Buscar.."> </search>
+
+
+
+
+              <div class="dropdown dropCuenta">
+                <button class="btn dropdown-toggle w-100 d-flex justify-content-between align-items-center text-primary"
+                  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="img/ic-user.svg" class="icon me-1"><small class="me-1 text-primary">Usuario</small>
+                </button>
+                <ul class="dropdown-menu w-100 bg-secondary">
+                  <li><a class="dropdown-item text-white" href="#">Mi cuenta</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Cerrar sesión</a></li>
+                </ul>
+              </div>
+
+              <button class="btn p-0 d-flex align-items-center cart">
+                <div class="position-relative">
+                  <img src="img/ic-cart.svg" class="me-3">
+                  <div class="countItem">0</div>
+                </div>
+                <small id="totalCarrito" class="me-1 text-primary">$ </small>
+              </button>
+                </div>
+                
+           
+              </button>
+          
+              <button id="borrarCarrito" class="me-1 text-primary border-0 bg-transparent p-0">
+                <div class="position-relative">  <img src="img/ic-delete-cart.png" alt=""></div>
+             </button>
+       
+             
+
+            </div>
+
+          </div>
+
+        </div>
+      </nav>
+    </section>
+
+  
+
+  </header>
+  <!-- HEADER -->
+
+  <div class="fixHeader"></div>
+
+
+  <!-- HERO -->
+
+
+  <!-- ORDEN -->
+  <section class="container-xl ordenListado mt-4 mb-4">
+    <div class="mar0 pad0 d-flex align-items-center justify-content-between flex-row overflow-hidden">
+
+      <div class="col-3 col-md-6 breads">
+        <button
+          class="col-lg-2 me-2 btn active btnFiltro d-block d-lg-none d-flex align-items-center justify-content-center"
+          data-bs-toggle="modal" data-bs-target="#modalFiltros">
+          <img src="img/ic-filtro.png" alt="">
+        </button>
+
+      </div>
+
+      <div class="col-9 col-md-6 d-flex align-items-center justify-content-end">
+        <select name='' id="selectorOrden">
+          <option value='0'>Ordenar por...</option>
+          <option value='1'>Menor precio</option>
+   
+        </select>
+        <a id="lista-lista" class="btn me-2"><img src="img/ic-lista.png" alt=""></a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LISTADO -->
+  <section class="container-xl mb-5">
+    <div class="row mar0 pad0">
+
+
+      <!-- FILTROS -->
+      <div class="d-none d-lg-block col-3 columnaFiltros">
+
+        <!-- categorias  -->
+        <div class="accordion mb-2 filtrosNivel1" id="categoria1">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headCat1">
+              <button class="accordion-button textCat" type="button" data-bs-toggle="collapse"
+                data-bs-target="#categoria1-head">CATEGORÍAS</button>
+            </h2>
+            <div id="categoria1-head" class="accordion-collapse collapse show pb-2 pt-2" aria-labelledby="headCat1"
+              data-bs-parent="#categoria1">
+              <div class="accordion-body">
+                <div id="cat_alimentos" class="filtrosNivel2"><input type='checkbox' name='' value='' placeholder='' id="checkboxCategoriaAlimentos"><a
+                    href="#">Alimentos</a></div>
+                <div id="cat_accesorios" class="filtrosNivel2"><input type='checkbox' name='' value='' placeholder='' id="checkboxCategoriaAccesorios"><a
+                    href="#">Accesorios</a></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- FILTROS // FIN -->
+
+      <!-- PRODUCTOS -->
+      <div id="idClassProductos" class="col-12 col-lg-9 columnaProductos mt-2 p-0">
+
+      </div>
+      <!-- PRODUCTOS // FIN -->
+
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-8 colLogo">
+        <img src="img/logo.png" class="logo">
+        <a href="#" class="text-white opacity-75">Defensa del consumidor</a>
+      </div>
+      <div class="col-12 col-md-3 col-lg-2 mt-4 mt-md-0 text-center text-md-start">
+        <h4>Menú</h4>
+        <ul class="mar0 pad0">
+          <li><a href="#">- Productos</a></li>
+          <li><a href="#">- Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3 col-lg-2 mt-4 mt-md-0 text-center text-md-start">
+        <h4>Información útil</h4>
+        <ul class="mar0 pad0">
+          <li><a href="#">- Preguntas frecuentes</a></li>
+          <li><a href="#">- Política de Privacidad</a></li>
+          <li><a href="#">- Términos y Condiciones</a></li>
+          <li><a href="#">- Botón de arrepentimiento</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="legal">
+    <div class="col-12">
+      <p>GALA SHOP. Powered by Francischini Mariano®</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

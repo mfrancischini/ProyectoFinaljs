@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+<title>GALA</title> 
+<meta name="description" content=""> 
+<meta name="keywords" content="">
+
+<!-- CSS -->
+<link href="css/estilos-bootstrap.css" rel="stylesheet">
+<link href="css/estilos.css" rel="stylesheet">
+<link href="css/estilo-personal.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+<!-- FAVICON -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;900&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- SCRIPT -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+crossorigin="anonymous"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.all.min.js
+"></script>
+<script defer src="js/checklist.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+
+
+<a href="#" class="wp" target="_blank"><img src="img/wapp.png"></a>
+
+
+
+
+
+<!-- HEADER -->
+<header class="section-header">
+
+  <section class="barraTop">
+    <p>WWW.GALA.COM</p>
+  </section>
+  
+  <section class="py-2">
+    <nav class="navbar navbar-main navbar-expand-xl navbar-light">
+      <div class="container-xl">
+
+        <a class="navbar-brand" href="#"><img src="img/logo2.png" class="logo"></a>
+
+        <!-- ICONOS MOBILE -->
+        <div class="contUserMob d-flex d-xl-none align-content-center barraIconosDesktop">
+
+               <div class="dropdown dropCuenta">
+            <button class="btn dropdown-toggle w-100 d-flex justify-content-between align-items-center text-primary pe-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="img/ic-user.svg" class="icon me-1"><span class="d-none d-md-block">Usuario</span>
+            </button>
+            <ul class="dropdown-menu w-100 bg-primary">
+              <li><a class="dropdown-item text-white" href="#">Mi cuenta</a></li>
+              <li><a class="dropdown-item text-white" href="#">Cerrar sesión</a></li>
+            </ul>
+          </div>
+
+          <button class="btn p-0 d-flex align-items-center cart">
+            <img src="img/ic-cart.svg" alt="">
+          </button>
+
+  
+
+          <img src="img/ic-menu.svg" class="abreMenuMobile d-block d-xl-none" alt="">
+
+        </div>
+
+
+        <!-- MENU DESKTOP -->
+        <div class="collapse navbar-collapse" id="main_nav2">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-3 mt-lg-0">
+
+           <!-- CATEGORIA -->
+           <li class="nav-item dropdown menuItem me-2">
+            <a class="nav-link dropdown-toggle dropdown-toggle2 fw-500 text-primary" href="#" id="navbarDropdown"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              PRODUCTOS
+            </a>
+            <ul class="dropdown-menu dropMenu01 dropMenuNivel1 bg-secondary" aria-labelledby="navbarDropdown">
+
+              <li class="nav-item dropdown drop-down02">
+                <a class="nav-link linked fw-500 text-white" href="#"><small>Alimentos</small></a>
+
+              </li>
+
+              <li class="nav-item dropdown drop-down02">
+                <a class="nav-link linked fw-500 text-white" href="#"><small>Accesorios</small></a>
+
+              </li>
+
+
+              <li class="nav-item dropdown drop-down02">
+                <a class="nav-link linked fw-500 text-white" href="#"><small>Ver todo</small></a>
+              </li>
+
+            </ul>
+          </li>
+
+
+            <!-- CATEGORIA -->
+            <li class="nav-item dropdown menuItem me-2">
+              <a class="nav-link fw-500 text-primary" href="#">CONTACTO</a>
+            </li>
+
+          </ul>
+
+    
+          <!-- ICONOS DESKTOP -->
+          <div class="barraIconosDesktop d-none d-lg-flex align-content-center">
+
+      
+
+            <div class="dropdown dropCuenta">
+              <button class="btn dropdown-toggle w-100 d-flex justify-content-between align-items-center text-primary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="img/ic-user.svg" class="icon me-1"><small class="me-1 text-primary">Usuario</small>
+              </button>
+              <ul class="dropdown-menu w-100 bg-secondary">
+                <li><a class="dropdown-item text-white" href="#">Mi cuenta</a></li>
+                <li><a class="dropdown-item text-white" href="#">Cerrar sesión</a></li>
+              </ul>
+            </div>
+
+              <button class="btn p-0 d-flex align-items-center cart">
+              <div class="position-relative">
+                <img src="img/ic-cart.svg" class="me-3">
+                <div id="cantidadCarrido" class="countItem">0</div>
+              </div>
+              $<small id="totalCarritonav" class="me-1 text-primary"></small>
+            </button>
+
+
+          </div>
+    
+        </div>
+
+      </div>
+    </nav>
+  </section>
+
+</header>
+<!-- HEADER -->
+<div class="fixHeader"></div>
+
+<!-- LISTADO -->
+<section class="container-xl mb-5 mt-4">
+  <div class="row mar0 pad0">
+
+   
+    <!-- PRODUCTOS -->
+    <div class="col-12 col-lg-8 col-xl-9 columnaProductos lista">
+ 
+      <div class="productoCarrito">
+  
+      </div>
+
+
+
+    </div>
+    <!-- PRODUCTOS // FIN -->
+
+
+    
+    <!-- SUBTOTAL -->
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 ms-auto">
+
+      <div class="card mb-2 infoSubtotal">
+
+        <div class="input-group mb-3 contDiscount">
+          <p class="w-100 m-0 mb-1">Código de descuento</p>
+          <form class="campo d-flex align-items-stretch justify-content-between">
+            <input type="text" name="" value="" placeholder="" class="elcampo">
+            <input type="button" name="" value="VALIDAR" placeholder="" class="btnSend">
+          </form>
+        </div>
+
+        <div class="card-body">
+
+          <dl class="dlist-align d-flex justify-content-between mb-0">
+            <dt class="fw-normal">Subtotal:</dt>
+            <dd id="subtotalCarrito"class="text-right fw-800">$ </dd>
+          </dl>
+
+          <dl class="dlist-align d-flex justify-content-between mb-0">
+            <dt class="fw-normal">Descuento:</dt>
+            <dd class="text-right">$-1.000</dd>
+          </dl>
+
+          <dl class="dlist-align d-flex justify-content-between mb-0 position-relative">
+            <dt class="fw-bold black">TOTAL:</dt>
+            <dd class="text-right"><strong id="totalCarrito" class="black">$ </strong></dd>
+          </dl>
+
+          <a href="#" id="finalizarCompra" class="btn w-100 btnComprar mb-2 mt-3"> FINALIZAR COMPRA </a>
+          <a href="index.html" class="btn w-100 btnSeguir"> SEGUIR COMPRANDO </a>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- SUBTOTAL // FIN -->
+
+
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-8 colLogo">
+      <img src="img/logo.png" class="logo">
+      <a href="#" class="text-white opacity-75">Defensa del consumidor</a>
+    </div>
+    <div class="col-12 col-md-3 col-lg-2 mt-4 mt-md-0 text-center text-md-start">
+      <h4>Menú</h4>
+      <ul class="mar0 pad0">
+        <li><a href="#">- Productos</a></li>
+        <li><a href="#">- Contacto</a></li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-3 col-lg-2 mt-4 mt-md-0 text-center text-md-start">
+      <h4>Información útil</h4>
+      <ul class="mar0 pad0">
+        <li><a href="#">- Preguntas frecuentes</a></li>
+        <li><a href="#">- Política de Privacidad</a></li>
+        <li><a href="#">- Términos y Condiciones</a></li>
+        <li><a href="#">- Botón de arrepentimiento</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="legal">
+  <div class="col-12">
+    <p>GALA SHOP. Powered by Francischini Mariano®</p>
+  </div>
+</div>
+  
+
+    
+
+
+</body>
+
+</html>
