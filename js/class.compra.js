@@ -1,6 +1,6 @@
 
 let shopping = JSON.parse(localStorage.getItem("miCarrito")) ?? []
-class Compra { 
+class Compra {
     constructor(carritoDeCompras) {
         this.carrito = carritoDeCompras
     }

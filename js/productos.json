@@ -1,0 +1,66 @@
+[
+    {
+      "id_producto":1,
+      "nombre":"Pedigree Adulto x 21 Kg",
+      "precio":12550,
+      "id_cat":1,
+      "id_marca":1,
+      "img":"img/prod1.jpg"
+    },
+    {
+      "id_producto":2,
+      "nombre":"Bolso de Viaje para Mascotas",
+      "precio":8990,
+      "id_cat":2,
+      "id_marca":2,
+      "img":"img/prod5.jpg"
+    },
+    {
+      "id_producto":3,
+      "nombre":"Collar Be Dog",
+      "precio":3186,
+      "id_cat":2,
+      "id_marca":3,
+      "img":"img/prod6.jpg"
+    },
+    {
+      "id_producto":4,
+      "nombre":"Cat Chow Adultos",
+      "precio":4578,
+      "id_cat":1,
+      "id_marca":4,
+      "img":"img/prod7.jpg"
+    },
+    {
+      "id_producto":5,
+      "nombre":"Dog Show Cachorro x 21 Kg",
+      "precio":10540,
+      "id_cat":1,
+      "id_marca":1,
+      "img":"img/prod3.jpg"
+    },
+    {
+      "id_producto":6,
+      "nombre":"Cucha Termica",
+      "precio":12788,
+      "id_cat":2,
+      "id_marca":2,
+      "img":"img/prod4.jpg"
+    },
+    {
+      "id_producto":7,
+      "nombre":"Correa Retráctil Extensible 3mts Apolo",
+      "precio":8312,
+      "id_cat":2,
+      "id_marca":3,
+      "img":"img/prod8.jpg"
+    },
+    {
+      "id_producto":8,
+      "nombre":"Agility Adultos",
+      "precio":3899,
+      "id_cat":1,
+      "id_marca":4,
+      "img":"img/prod2.jpg"
+    }
+  ]

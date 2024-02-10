@@ -1,16 +1,7 @@
+const URL = 'js/productos.json'
+
 // Array de Productos
-const productos = [
-    { id_producto: 1, nombre: 'Pedigree Adulto x 21 Kg', precio: 12550, id_cat: 1, id_marca: 1, img: "img/prod1.jpg" },
-    { id_producto: 2, nombre: 'Bolso de Viaje para Mascotas', precio: 8990, id_cat: 2, id_marca: 2, img: "img/prod5.jpg" },
-    { id_producto: 3, nombre: 'Collar Be Dog', precio: 3186, id_cat: 2, id_marca: 3, img: "img/prod6.jpg" },
-    { id_producto: 4, nombre: 'Cat Chow Adultos', precio: 4578, id_cat: 1, id_marca: 4, img: "img/prod7.jpg" },
-    { id_producto: 5, nombre: 'Dog Show Cachorro x 21 Kg', precio: 10540, id_cat: 1, id_marca: 1, img: "img/prod3.jpg" },
-    { id_producto: 6, nombre: 'Cucha Termica', precio: 12788, id_cat: 2, id_marca: 2, img: "img/prod4.jpg" },
-    { id_producto: 7, nombre: 'Correa Retráctil Extensible 3mts Apolo', precio: 8312, id_cat: 2, id_marca: 3, img: "img/prod8.jpg" },
-    { id_producto: 8, nombre: 'Agility Adultos', precio: 3899, id_cat: 1, id_marca: 4, img: "img/prod2.jpg" },
-
-
-];
+const productos = []
 // Array de Inventario
 
 
@@ -31,7 +22,7 @@ const categorias = [
     { id_cat: 2, nombre: 'Accesorios' },
 ];
 
-// // Array de Carrito
+// // Array de Carrito  
 
 let carrito = JSON.parse(localStorage.getItem("miCarrito")) ?? []
 
@@ -44,7 +35,7 @@ function retornarProducto(producto) {
                 <h6 class="font-cormorant mt-3 mb-0">${producto.nombre}</h6>
                 <p class="price mt-2 mb-2">$${producto.precio}</p>
         </a>
-        <a href="#" id="${producto.id_producto}" class="btn text-white py-2 px-4 mt-0">COMPRAR</a>
+        <a href="#" id="${producto.id_producto}" class="btn text-white py-2 px-4 mt-0">AGREGAR</a>
     </div>`
 
 }
@@ -99,15 +90,26 @@ function cargarProducto(array) {
             }
         });
     } else {
-        // Manejar el caso cuando no hay productos
+        mensaje("No se pudo listar los productos", 'darkred')
     }
 }
-cargarProducto(productos);
+
+function obtenerProducto(){
+    fetch(URL)
+        .then((response)=> response.json())
+        .then((data)=> productos.push(...data))
+        .then(()=> cargarProducto(productos))
+        .catch((error)=> mensaje("Error Inesperado!!", 'darkred'))
+} 
+
+obtenerProducto() //Funcion Principal
+
 function calcularTotalCarrito() {
     let total = carrito.reduce((subtotal, carrito) => subtotal + carrito.precio, 0)
     return total
 }
 const imagenesCarrito = document.querySelectorAll("button.btn.cart");
+
 imagenesCarrito.forEach((imagenCarrito) => {
     imagenCarrito.addEventListener("mousemove", () => {
         carrito.length > 0 ? imagenCarrito.title = carrito.length + " productos en carrito" : imagenCarrito.title = "Carrito Vacío";
@@ -192,12 +194,22 @@ selectorOrden.addEventListener("click", () => {
             arrayordenado.forEach((producto) => {
                 columna.innerHTML += retornarProducto(producto);
             }) :
-            console.log("ERROR");
+            mensaje("No se pudo listar los productos", 'darkred')
+    } else if (ordenSeleccionado === '2') {
+        const arrayordenado = ordenarProductosPorPrecioMayor()
+        columna.innerHTML = ''
+        arrayordenado.length > 0 ?
+            arrayordenado.forEach((producto) => {
+                columna.innerHTML += retornarProducto(producto);
+            }) :
+            mensaje("No se pudo listar los productos", 'darkred')
+    } else {
+        mensaje("Hay que elegir un ordenamiento", 'orange')
     }
-    else {
-        console.log("ERROR")
-    }
+    
 });
+
+
 const inputBuscar = document.querySelector("#campoABuscar")
 inputBuscar.addEventListener("input", (e) => {
     console.clear()
@@ -216,8 +228,6 @@ borradoCarrito.addEventListener("click", (e) => {
     limpiarCarrito()
 
 })
-calcularCantidadCarrito()
-
 
 function mensaje(mensaje, estilo) {
     Toastify({
@@ -228,3 +238,7 @@ function mensaje(mensaje, estilo) {
         },
     }).showToast();
 }
+calcularCantidadCarrito()
+
+
+

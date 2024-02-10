@@ -12,16 +12,17 @@ let carrito = JSON.parse(localStorage.getItem("miCarrito")) ?? []
 
 
 function armarCarritoHTML(producto) {
-    return `
-      <div class="productoCarrito">
+    return `   
+    <div class="productoCarrito">
         <img src="${producto.img}" class="w-100 foto">
-        <div class="nombre">
-          <h6 class="font-cormorant mb-0">${producto.nombre}</h6>
+         <div class="nombre">
+              <h6 class="font-cormorant mb-0">${producto.nombre}</h6>
         </div>
-        <p class="price d-none d-md-block">$${producto.precio}</p>
-        <button data-id="${producto.id_producto}" class="btnErase">X</button>
-      </div>
-    `;
+             <p class="price d-none d-md-block">$${producto.precio}</p>
+            <button data-id="${producto.id_producto}" class="btnErase">X</button>
+     </div>
+    `
+        ;
 }
 function eliminarDelCarrito(prodAEliminar) {
     let productoAEliminar = prodAEliminar;
@@ -35,14 +36,20 @@ function eliminarDelCarrito(prodAEliminar) {
     if (carrito.length === 0) {
         listaCarrito.innerHTML = `
         <div class="container">
-    <div class="row">
-        <div class="col">
-            <p class="text-center">El Carrito se encuentra Vacio.</p>
+             <div class="row justify-content-center">
+                 <div class="col-12 col-md-6"
+                     <p class="text-center">El Carrito se encuentra Vacio.</p>
+                 </div>
+             </div>
+             <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+                 <img src="img/carrito_vacio.png">
+                 </div>
+             </div>
         </div>
-    </div>
-</div>
       `}
 }
+
 
 
 function renderizarCarrito() {
@@ -80,13 +87,29 @@ function calcularCantidadCarrito() {
         //carrito vacio
     }
 }
+function barra(){
+    let value = 0;
+    const progress = document.querySelector("#progress")
+    setInterval(() => {
+        if (value > 10) {
+            progress.value= 0
+            value = 0
+        } else {
+            progress.value = value
+            value++
+        }
+    }, 1000);
+}
+
+
 function emailCompra() {
+
     Swal.fire({
         title: "Por favor llenar el formulario para finalizar la compra",
         html: `
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <form id="formularioCompra" class="form-control">
                         <input type="text" name="nombre" value="" placeholder="Nombre" id="formNombre" class="form-control mb-2">
                         <input type="text" name="direccion" value="" placeholder="Domicilio" class="form-control mb-2" id="formDomicilio">
@@ -123,17 +146,22 @@ function emailCompra() {
                 Swal.fire({
                     position: "center",
                     icon: "success",
-                    title: "Su compra fue Exitosa",
+                    title: "Procesando",
                     html: `
                     <div>
-                        <h5>Muchas Gracias ${nombre} por su Compra!!!</h5>
-                        <h5>Le enviamos un email a ${email} !!!</h5>
+                        <h5>Hola ${nombre} Estamos procesando su compra!!!</h5>
+                        <h5>Le enviaremos un email a ${email} !!!</h5>
+                        <div><progress id="progress" value="0" min="0" max="10"></progress></div>
+
                     </div>`,
-                    showConfirmButton: false,
-                    timer: 6000
-                }).then(() => {
-                    window.location.href = "compra.html";
+                    
+                    showConfirmButton: false
+                    
                 });
+                barra()
+                setTimeout(() => {
+                    window.location.href = "compra.html";
+                }, 11000); // Redirigir después de 11 segundos
             }
         }
     });
