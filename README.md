@@ -2,7 +2,7 @@
 # 💫 About Me:
 # Proyecto  - Java Script
 
-¡Hola! Soy Mariano Francischini. Esta es la 3ra entrega del Proyecto  para el curso de Java Script en CoderHouse.
+¡Hola! Soy Mariano Francischini. Esta es la entrega del Proyecto  para el curso de Java Script en CoderHouse.
 
 ## Descripción del Proyecto
 
@@ -17,12 +17,6 @@ El versionado del proyecto fue controlado mediante Git y se encuentra alojado en
 Dentro del proyecto, se trabajó con las siguientes tecnologías y conceptos:
 
 - JavaScript
-
-## Temas del Proyecto
-
-    ✅ DOM
-    ✅ Eventos
-    ✅ JSON y storage
 
 ## Descripción del Proyecto
 

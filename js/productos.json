@@ -5,7 +5,8 @@
       "precio":12550,
       "id_cat":1,
       "id_marca":1,
-      "img":"img/prod1.jpg"
+      "img":"img/prod1.jpg",
+      "stock":5
     },
     {
       "id_producto":2,
@@ -13,7 +14,8 @@
       "precio":8990,
       "id_cat":2,
       "id_marca":2,
-      "img":"img/prod5.jpg"
+      "img":"img/prod5.jpg",
+      "stock":5
     },
     {
       "id_producto":3,
@@ -21,7 +23,8 @@
       "precio":3186,
       "id_cat":2,
       "id_marca":3,
-      "img":"img/prod6.jpg"
+      "img":"img/prod6.jpg",
+      "stock":0
     },
     {
       "id_producto":4,
@@ -29,7 +32,8 @@
       "precio":4578,
       "id_cat":1,
       "id_marca":4,
-      "img":"img/prod7.jpg"
+      "img":"img/prod7.jpg",
+      "stock":5
     },
     {
       "id_producto":5,
@@ -37,7 +41,8 @@
       "precio":10540,
       "id_cat":1,
       "id_marca":1,
-      "img":"img/prod3.jpg"
+      "img":"img/prod3.jpg",
+      "stock":5
     },
     {
       "id_producto":6,
@@ -45,7 +50,8 @@
       "precio":12788,
       "id_cat":2,
       "id_marca":2,
-      "img":"img/prod4.jpg"
+      "img":"img/prod4.jpg",
+      "stock":0
     },
     {
       "id_producto":7,
@@ -53,7 +59,8 @@
       "precio":8312,
       "id_cat":2,
       "id_marca":3,
-      "img":"img/prod8.jpg"
+      "img":"img/prod8.jpg",
+      "stock":5
     },
     {
       "id_producto":8,
@@ -61,6 +68,7 @@
       "precio":3899,
       "id_cat":1,
       "id_marca":4,
-      "img":"img/prod2.jpg"
+      "img":"img/prod2.jpg",
+      "stock":9
     }
   ]

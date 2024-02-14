@@ -13,17 +13,22 @@ let carrito = JSON.parse(localStorage.getItem("miCarrito")) ?? []
 
 function armarCarritoHTML(producto) {
     return `   
+  
+
     <div class="productoCarrito">
         <img src="${producto.img}" class="w-100 foto">
+        
          <div class="nombre">
               <h6 class="font-cormorant mb-0">${producto.nombre}</h6>
         </div>
              <p class="price d-none d-md-block">$${producto.precio}</p>
             <button data-id="${producto.id_producto}" class="btnErase">X</button>
      </div>
-    `
-        ;
+    `;
 }
+
+
+
 function eliminarDelCarrito(prodAEliminar) {
     let productoAEliminar = prodAEliminar;
     const indice = carrito.findIndex((producto) => producto.id_producto === parseInt(productoAEliminar));
@@ -50,9 +55,8 @@ function eliminarDelCarrito(prodAEliminar) {
       `}
 }
 
-
-
 function renderizarCarrito() {
+    
     listaCarrito.innerHTML = ""
     carrito.forEach((producto) => {
         listaCarrito.innerHTML += armarCarritoHTML(producto);
@@ -87,12 +91,12 @@ function calcularCantidadCarrito() {
         //carrito vacio
     }
 }
-function barra(){
+function barra() {
     let value = 0;
     const progress = document.querySelector("#progress")
     setInterval(() => {
         if (value > 10) {
-            progress.value= 0
+            progress.value = 0
             value = 0
         } else {
             progress.value = value
@@ -154,9 +158,9 @@ function emailCompra() {
                         <div><progress id="progress" value="0" min="0" max="10"></progress></div>
 
                     </div>`,
-                    
+
                     showConfirmButton: false
-                    
+
                 });
                 barra()
                 setTimeout(() => {

@@ -2,19 +2,6 @@ const URL = 'js/productos.json'
 
 // Array de Productos
 const productos = []
-// Array de Inventario
-
-
-const inventario = [
-    { id_producto: 1, stock: 10 },
-    { id_producto: 2, stock: 0 },
-    { id_producto: 3, stock: 10 },
-    { id_producto: 4, stock: 10 },
-    { id_producto: 5, stock: 10 },
-    { id_producto: 6, stock: 0 },
-    { id_producto: 7, stock: 10 },
-    { id_producto: 8, stock: 10 },
-];
 
 // // Array de Categorias
 const categorias = [
@@ -56,7 +43,7 @@ function calcularCantidadCarrito() {
 }
 //Funcion consultar el inventario de los productos del shop
 function consultarInventario(id) {
-    const inventarioProducto = inventario.find(item => item.id_producto === id);
+    const inventarioProducto = productos.find(item => item.id_producto === id);
     return inventarioProducto.stock;
 }
 
@@ -204,7 +191,7 @@ selectorOrden.addEventListener("click", () => {
             }) :
             mensaje("No se pudo listar los productos", 'darkred')
     } else {
-        mensaje("Hay que elegir un ordenamiento", 'orange')
+        
     }
     
 });
