@@ -56,7 +56,7 @@ function eliminarDelCarrito(prodAEliminar) {
 }
 
 function renderizarCarrito() {
-    
+
     listaCarrito.innerHTML = ""
     carrito.forEach((producto) => {
         listaCarrito.innerHTML += armarCarritoHTML(producto);
