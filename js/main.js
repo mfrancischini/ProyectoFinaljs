@@ -81,15 +81,22 @@ function cargarProducto(array) {
     }
 }
 
-function obtenerProducto(){
-    fetch(URL)
-        .then((response)=> response.json())
-        .then((data)=> productos.push(...data))
-        .then(()=> cargarProducto(productos))
-        .catch((error)=> mensaje("Error Inesperado!!", 'darkred'))
-} 
+function obtenerProductos() {
+    fetch(URL) // intenta obtener los datos
+        .then((response) => {
+            if (response.ok) {
+                return response.json()
+            } else {
+                throw new Error("No se pudo obtener los productos. (" + response.status + ")")
+            }
+        })
+        .then((data) => productos.push(...data))
+        .then(() => cargarProducto(productos))
+        .catch((error) => mensaje("Error Inesperado!!", 'darkred'))
+}
 
-obtenerProducto() //Funcion Principal
+
+obtenerProductos() //Funcion Principal
 
 function calcularTotalCarrito() {
     let total = carrito.reduce((subtotal, carrito) => subtotal + carrito.precio, 0)
@@ -191,9 +198,9 @@ selectorOrden.addEventListener("click", () => {
             }) :
             mensaje("No se pudo listar los productos", 'darkred')
     } else {
-        
+
     }
-    
+
 });
 
 

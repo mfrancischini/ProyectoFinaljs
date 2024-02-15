@@ -115,9 +115,9 @@ function emailCompra() {
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <form id="formularioCompra" class="form-control">
-                        <input type="text" name="nombre" value="" placeholder="Nombre" id="formNombre" class="form-control mb-2">
-                        <input type="text" name="direccion" value="" placeholder="Domicilio" class="form-control mb-2" id="formDomicilio">
-                        <input type="email" name="email" value="" placeholder="Email" class="form-control mb-2" id="formEmail">
+                        <input type="text" name="nombre" value="Juan Perez" placeholder="Nombre" id="formNombre" class="form-control mb-2">
+                        <input type="text" name="direccion" value="Bartolome Mitre 355" placeholder="Domicilio" class="form-control mb-2" id="formDomicilio">
+                        <input type="email" name="email" value="jperez@hotmail.com" placeholder="Email" class="form-control mb-2" id="formEmail">
                     </form>
                 </div>
             </div>
